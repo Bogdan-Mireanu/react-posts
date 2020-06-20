@@ -24,7 +24,7 @@ class PostList extends React.Component {
 
     renderList() {
         
-        const {posts} = this.props
+        const {posts} = this.props;
         return posts.map (post => {
             return (
             <div className ='item card section' key={post.id}>

@@ -8,7 +8,7 @@ class User extends React.Component{
         this.props.fetchUser(this.props.userId);
     }
     render(){
-        const user = this.props.users.find(user => user.id === this.props.userId)
+        const user = this.props.user.find(user => user.id === this.props.userId)
         if (!user) {
             return null;
         }
@@ -23,6 +23,6 @@ class User extends React.Component{
 }
 
 const mapStateToProps = (state) => {
-    return {users: state.users};
+    return {user: state.user};
 }
 export default connect(mapStateToProps, {fetchUser})(User);
