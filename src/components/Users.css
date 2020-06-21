@@ -1,0 +1,11 @@
+
+table .ui {
+    width: 70%;
+}
+
+@media screen and (max-width: 600px) {
+    thead tr .none,
+    tr .none {
+      visibility: hidden;
+    }
+}

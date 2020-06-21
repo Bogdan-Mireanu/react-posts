@@ -1,4 +1,5 @@
 import React from 'react';
+import './Users.css';
 import { connect} from 'react-redux';
 import {fetchUsers} from '../actions';
 
@@ -6,19 +7,18 @@ class Users extends React.Component{
 
     componentDidMount(){
         this.props.fetchUsers();
-        console.log(this.props.users);
     }
 
     renderUsers() {
         const {users} = this.props;
         return users.map(user => {
             return (
-                    <tr>
+                    <tr key={user.id}>
                         <td data-label='id'>{user.id}</td>
                         <td data-label="name">{user.name}</td>
-                        <td data-label="email">{user.email}</td>
-                        <td data-label="website">{user.website}</td>
-                        <td data-label="company">{user.company.name}</td>
+                        <td data-label="email" className='none'>{user.email}</td>
+                        <td data-label="website" className='none'>{user.website}</td>
+                        <td data-label="company" className='none'>{user.company.name}</td>
                     </tr>
             )
         })
@@ -31,9 +31,9 @@ class Users extends React.Component{
                     <tr>
                         <th>ID</th>
                         <th>Name</th>
-                        <th>Email</th>
-                        <th>Website</th>
-                        <th>Company Name</th>
+                        <th className='none'>Email</th>
+                        <th className='none'>Website</th>
+                        <th className='none'>Company Name</th>
                     </tr>
                 </thead>
                 <tbody>

@@ -1,20 +1,32 @@
 #root {
-  max-width: 100%;
+  max-width: 90%;
   margin: auto;
 
 }
+.section {
+  text-align: center;
+}
+.info {
+  padding: 1em 1em;
+}
+    
+.content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 .ui {
-    justify-content: space-evenly;
+  justify-content: space-evenly;
 }
 
 h1 {
-    font-size:1.2rem;
+  font-size:1.2rem;
 }
 h2 {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 p{
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 .myButton {
@@ -40,27 +52,13 @@ p{
     position: absolute;
     display: block;
     width:25%;
-    height: 20%;
+    height: 16%;
     background:linear-gradient(to bottom, #fb9e25 5%, #ffc477 100%);
     background-color:#fb9e25;
     display: inline-block;
     z-index: 200;
-    right: 2%;
-    text-decoration: underline;
+    right: 5%;
 }
-.section {
-text-align: center;
-}
-.info {
-    padding: 1em 1em;
-}
-
-.content{
-   display: flex;
-   flex-direction: row;
-   justify-content: space-between;
-}
-
 .toggle-button {
     position: absolute;
   }

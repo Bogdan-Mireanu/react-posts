@@ -1,8 +1,8 @@
 import React from 'react';
 import PostList from './PostList';
 import Users from './Users';
-import './App.css';
 import Header from './Header';
+import './App.css';
 import {
     BrowserRouter as Router,
     Switch,
@@ -26,9 +26,7 @@ const App = () => {
         </Switch>
         </div>
       </Router>  
-
     </div>
-  
 )};
 
 export default App;
